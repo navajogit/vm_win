@@ -1,4 +1,3 @@
-# Define the files to be downloaded with their URLs and descriptions
 $filesToDownload = @(
     @{
         Url = "https://updates.safing.io/latest/windows_amd64/packages/portmaster-installer.exe"
