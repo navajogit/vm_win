@@ -1,4 +1,4 @@
-# vm faster setup
+Win vm faster setup script
 
 # Function to download a file and check for success
 function Download-File($url, $outputPath, $description) {
@@ -46,6 +46,7 @@ Start-Sleep -Seconds 2
 Download-File -url "https://www.spice-space.org/download/windows/spice-webdavd/spice-webdavd-x64-latest.msi" -outputPath "$env:USERPROFILE\Downloads\spice-webdavd-x64-latest.msi" -description "spice-webdavd-x64-latest.msi"
 
 
+# tweaks
 
 # Prompt to run the program
 $runProgram = Read-Host "Do you want to run the program from christitus.com? (Y/N)"
