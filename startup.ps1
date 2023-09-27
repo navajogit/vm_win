@@ -68,5 +68,3 @@ if ($runProgram -eq "Y" -or $runProgram -eq "y") {
 } else {
     Write-Host "The program was not executed."
 }
-
-
