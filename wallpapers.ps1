@@ -1,5 +1,7 @@
 # changing wallpaper with exteranal list of urls
 
+# changing wallpaper
+
 while ($true) {
     # Zapytaj użytkownika, czy chce zmienić tapetę
     $changeWallpaper = Read-Host "Do you want to change the desktop wallpaper? (Y/N)"
