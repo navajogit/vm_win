@@ -1,7 +1,5 @@
 # changing wallpaper with exteranal list of urls
 
-# changing wallpaper
-
 # URL repozytorium GitHub zawierającego listę URL obrazków
 $githubRepoUrl = "https://raw.githubusercontent.com/navajogit/vm_win/main/wallpapers_urls.txt"
 
@@ -22,17 +20,7 @@ while ($true) {
         Invoke-WebRequest -Uri $randomUrl -OutFile $wallpaperPath
 
         # Ustaw obrazek jako tapetę
-        Add-Type -TypeDefinition @"
-        using System;
-        using System.Runtime.InteropServices;
-
-        public class Wallpaper {
-            [DllImport("user32.dll", CharSet = CharSet.Auto)]
-            public static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
-        }
-"@
-
-        [Wallpaper]::SystemParametersInfo(0x0014, 0, $wallpaperPath, 0x0001)
+        rundll32.exe user32.dll, UpdatePerUserSystemParameters
 
         Write-Host "The wallpaper has been changed to a random image from the GitHub repository."
     } else {
