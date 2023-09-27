@@ -1,4 +1,4 @@
-# changing wallpaper
+# changing wallpaper with exteranal list of urls
 
 while ($true) {
     # Zapytaj użytkownika, czy chce zmienić tapetę
