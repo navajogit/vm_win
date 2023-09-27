@@ -13,5 +13,11 @@ Invoke-WebRequest -Uri "https://www.spice-space.org/download/windows/spice-guest
 # Download and install Spice WebDAVd
 Invoke-WebRequest -Uri "https://www.spice-space.org/download/windows/spice-webdavd/spice-webdavd-x64-latest.msi" -OutFile "$env:USERPROFILE\Downloads\spice-webdavd-x64-latest.msi"
 
-# Run the script from christitus.com
-Invoke-Expression (Invoke-WebRequest -Uri "https://christitus.com/win").Content
+# Prompt to run the program
+$runProgram = Read-Host "Do you want to run the program from christitus.com? (Y/N)"
+if ($runProgram -eq "Y" -or $runProgram -eq "y") {
+    # Run the script from christitus.com
+    Invoke-Expression (Invoke-WebRequest -Uri "https://christitus.com/win").Content
+} else {
+    Write-Host "The program was not executed."
+}
