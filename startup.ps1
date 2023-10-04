@@ -18,18 +18,18 @@ $filesToDownload = @(
     @{
         Url = "https://www.spice-space.org/download/windows/spice-webdavd/spice-webdavd-x64-latest.msi"
         Description = "spice-webdavd-x64-latest.msi"
-    }
+    },
     @{
         Url = "https://www.clamav.net/downloads/production/clamav-1.2.0.win.x64.msi"
         Description = "clamav-1.2.0.win.x64.msi"
     }
 )
 
-# Loop through the list of files and ask the user whether to download each one
-foreach ($fileInfo in $filesToDownload) {
-    Write-Host "Do you want to download $($fileInfo.Description)? (Y/N)"
-    $downloadChoice = Read-Host
-    if ($downloadChoice -eq "Y" -or $downloadChoice -eq "y") {
+# Ask the user if they want to download all files at once.
+Write-Host "Do you want to download all available files at once? (Y/N)"
+$downloadAll = Read-Host
+if ($downloadAll -eq "Y" -or $downloadAll -eq "y") {
+    foreach ($fileInfo in $filesToDownload) {
         Write-Host "Downloading $($fileInfo.Description)..."
         $outputPath = "$env:USERPROFILE\Downloads\$($fileInfo.Description)"
         Invoke-WebRequest -Uri $fileInfo.Url -OutFile $outputPath
@@ -39,11 +39,27 @@ foreach ($fileInfo in $filesToDownload) {
             Write-Host "Failed to download $($fileInfo.Description). Please try downloading it manually or run the script again."
             exit
         }
-    } else {
-        Write-Host "Skipping $($fileInfo.Description) download."
+    }
+} else {
+    # Loop through the list of files and ask the user whether to download each one
+    foreach ($fileInfo in $filesToDownload) {
+        Write-Host "Do you want to download $($fileInfo.Description)? (Y/N)"
+        $downloadChoice = Read-Host
+        if ($downloadChoice -eq "Y" -or $downloadChoice -eq "y") {
+            Write-Host "Downloading $($fileInfo.Description)..."
+            $outputPath = "$env:USERPROFILE\Downloads\$($fileInfo.Description)"
+            Invoke-WebRequest -Uri $fileInfo.Url -OutFile $outputPath
+            if ($?) {
+                Write-Host "$($fileInfo.Description) downloaded successfully."
+            } else {
+                Write-Host "Failed to download $($fileInfo.Description). Please try downloading it manually or run the script again."
+                exit
+            }
+        } else {
+            Write-Host "Skipping $($fileInfo.Description) download."
+        }
     }
 }
-
 
 
 # tweaks
