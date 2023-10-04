@@ -118,7 +118,7 @@ while ($true) {
 
 
 
-
+# additional files
 $OtherfilesToDownload = @(
     @{
         Url = "https://launchpad.net/veracrypt/trunk/1.26.7/+download/VeraCrypt%20Setup%201.26.7.exe"
@@ -175,7 +175,7 @@ if ($downloadAll -eq "Y" -or $downloadAll -eq "y") {
                 exit
             }
         } else {
-            Write-Host "Skipping $($fileInfo.Description) download.".
+            Write-Host "Skipping $($fileInfo.Description) download."
         }
     }
 }
