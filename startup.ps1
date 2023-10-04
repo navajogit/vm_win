@@ -175,7 +175,7 @@ if ($downloadAll -eq "Y" -or $downloadAll -eq "y") {
                 exit
             }
         } else {
-            Write-Host "Skipping $($fileInfo.Description) download."
+            Write-Host "Skipping $($fileInfo.Description) download.".
         }
     }
 }
