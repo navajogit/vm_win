@@ -19,6 +19,10 @@ $filesToDownload = @(
         Url = "https://www.spice-space.org/download/windows/spice-webdavd/spice-webdavd-x64-latest.msi"
         Description = "spice-webdavd-x64-latest.msi"
     }
+    @{
+        Url = "https://www.clamav.net/downloads/production/clamav-1.2.0.win.x64.msi"
+        Description = "clamav-1.2.0.win.x64.msi"
+    }
 )
 
 # Loop through the list of files and ask the user whether to download each one
@@ -56,26 +60,26 @@ if ($runProgram -eq "Y" -or $runProgram -eq "y") {
 
 # changing wallpaper with exteranal list of urls
 
-# URL repozytorium GitHub zawierającego listę URL obrazków
+# URL repo
 $githubRepoUrl = "https://raw.githubusercontent.com/navajogit/vm_win/main/wallpapers_urls.txt"
 
-# Pobierz zawartość pliku z listą URL obrazków i podziel na tablicę
+# Dowload file content and spit to a table
 $wallpaperUrls = (Invoke-RestMethod -Uri $githubRepoUrl -UseBasicParsing).Split([Environment]::NewLine, [StringSplitOptions]::RemoveEmptyEntries)
 
 while ($true) {
-    # Zapytaj użytkownika, czy chce zmienić tapetę
+    # Wanna change your wallpaper?
     $changeWallpaper = Read-Host "Do you want to change the desktop wallpaper? (Y/N)"
     if ($changeWallpaper -eq "Y" -or $changeWallpaper -eq "y") {
         # Wybierz losowy URL z listy
         $randomUrl = $wallpaperUrls | Get-Random
 
-        # Ścieżka docelowa dla tapety w folderze tapet systemowych
+        # target directory for wallpaper file
         $wallpaperPath = "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Themes\TranscodedWallpaper"
 
-        # Pobierz losowy obrazek za pomocą wget
+        # download random url with wget
         Invoke-WebRequest -Uri $randomUrl -OutFile $wallpaperPath
 
-        # Ustaw obrazek jako tapetę
+        # set in the background
         rundll32.exe user32.dll, UpdatePerUserSystemParameters
 
         Write-Host "The wallpaper has been changed to a random image from the GitHub repository."
