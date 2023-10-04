@@ -70,7 +70,7 @@ while ($true) {
     # Wanna change your wallpaper?
     $changeWallpaper = Read-Host "Do you want to change the desktop wallpaper? (Y/N)"
     if ($changeWallpaper -eq "Y" -or $changeWallpaper -eq "y") {
-        # Wybierz losowy URL z listy
+        # choose random url
         $randomUrl = $wallpaperUrls | Get-Random
 
         # target directory for wallpaper file
