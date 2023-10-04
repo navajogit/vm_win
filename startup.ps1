@@ -121,7 +121,7 @@ while ($true) {
 $OtherfilesToDownload = @(
     @{
         Url = "https://launchpad.net/veracrypt/trunk/1.26.7/+download/VeraCrypt%20Setup%201.26.7.exe"
-        Description = "VeraCryptSetup201.26.7.exe"
+        Description = "VeraCryptSetup 1.26.7.exe"
     },
     @{
         Url = "https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/Git-2.42.0.2-64-bit.exe"
