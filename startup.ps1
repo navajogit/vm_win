@@ -27,8 +27,8 @@ $filesToDownload = @(
 
 # Display descriptions of all files
 Write-Host "Available files to download:"
-foreach ($fileInfo in $filesToDownload) {
-    Write-Host "$($fileInfo.Description)"
+$filesToDownload | ForEach-Object {
+    Write-Host "$($_.Description)"
 }
 
 # Ask the user if they want to download all files at once.
@@ -66,6 +66,7 @@ if ($downloadAll -eq "Y" -or $downloadAll -eq "y") {
         }
     }
 }
+
 
 
 # tweaks
