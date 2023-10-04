@@ -30,13 +30,13 @@ $filesToDownload = @(
 )
 
 # Display descriptions of all files
-Write-Host "Available files to download:"
+Write-Host "Available basic startup files to download:"
 $filesToDownload | ForEach-Object {
     Write-Host "$($_.Description)"
 }
 
 # Ask the user if they want to download all files at once.
-Write-Host "Do you want to download all available files at once? (Y/N)"
+Write-Host "Do you want to download all available basic startup files at once? (Y/N)"
 $downloadAll = Read-Host
 if ($downloadAll -eq "Y" -or $downloadAll -eq "y") {
     foreach ($fileInfo in $filesToDownload) {
@@ -113,5 +113,69 @@ while ($true) {
     } else {
         Write-Host "Exiting the wallpaper changer."
         break
+    }
+}
+
+
+
+
+$OtherfilesToDownload = @(
+    @{
+        Url = "https://launchpad.net/veracrypt/trunk/1.26.7/+download/VeraCrypt%20Setup%201.26.7.exe"
+        Description = "VeraCryptSetup201.26.7.exe"
+    },
+    @{
+        Url = "https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/Git-2.42.0.2-64-bit.exe"
+        Description = "Git-2.42.0.2-64-bit.ex"
+    },
+    @{
+        Url = https://www.aescrypt.com/download/v3/windows/AESCrypt_v310_x64.zip"
+        Description = "AESCrypt_v310_x64.zip"
+    },
+    @{
+        Url = "https://www.aescrypt.com/download/v3/windows/AESCrypt_console_v310_x64.zip"
+        Description = "AESCrypt_console_v310_x64.zip"
+    }
+)
+
+# Display descriptions of all files
+Write-Host "Available additional files to download:"
+$OtherfilesToDownload | ForEach-Object {
+    Write-Host "$($_.Description)"
+}
+
+# Ask the user if they want to download all files at once.
+Write-Host "Do you want to download all available additional files at once? (Y/N)"
+$downloadAll = Read-Host
+if ($downloadAll -eq "Y" -or $downloadAll -eq "y") {
+    foreach ($fileInfo in $OtherfilesToDownload) {
+        Write-Host "Downloading $($fileInfo.Description)..."
+        $outputPath = "$env:USERPROFILE\Downloads\$($fileInfo.Description)"
+        Invoke-WebRequest -Uri $fileInfo.Url -OutFile $outputPath
+        if ($?) {
+            Write-Host "$($fileInfo.Description) downloaded successfully."
+        } else {
+            Write-Host "Failed to download $($fileInfo.Description). Please try downloading it manually or run the script again."
+            exit
+        }
+    }
+} else {
+    # Loop through the list of files and ask the user whether to download each one
+    foreach ($fileInfo in $OtherfilesToDownload) {
+        Write-Host "Do you want to download $($fileInfo.Description)? (Y/N)"
+        $downloadChoice = Read-Host
+        if ($downloadChoice -eq "Y" -or $downloadChoice -eq "y") {
+            Write-Host "Downloading $($fileInfo.Description)..."
+            $outputPath = "$env:USERPROFILE\Downloads\$($fileInfo.Description)"
+            Invoke-WebRequest -Uri $fileInfo.Url -OutFile $outputPath
+            if ($?) {
+                Write-Host "$($fileInfo.Description) downloaded successfully."
+            } else {
+                Write-Host "Failed to download $($fileInfo.Description). Please try downloading it manually or run the script again."
+                exit
+            }
+        } else {
+            Write-Host "Skipping $($fileInfo.Description) download."
+        }
     }
 }
