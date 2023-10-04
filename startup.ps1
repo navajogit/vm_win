@@ -22,6 +22,10 @@ $filesToDownload = @(
     @{
         Url = "https://www.clamav.net/downloads/production/clamav-1.2.0.win.x64.msi"
         Description = "clamav-1.2.0.win.x64.msi"
+    },
+    @{
+        Url = "https://www.torproject.org/dist/torbrowser/12.5.6/torbrowser-install-win64-12.5.6_ALL.exe"
+        Description = "torbrowser-install-win64-12.5.6_ALL.exe"
     }
 )
 
