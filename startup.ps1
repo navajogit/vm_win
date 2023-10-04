@@ -118,7 +118,6 @@ while ($true) {
 
 
 
-# additional files
 $OtherfilesToDownload = @(
     @{
         Url = "https://launchpad.net/veracrypt/trunk/1.26.7/+download/VeraCrypt%20Setup%201.26.7.exe"
@@ -126,10 +125,10 @@ $OtherfilesToDownload = @(
     },
     @{
         Url = "https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/Git-2.42.0.2-64-bit.exe"
-        Description = "Git-2.42.0.2-64-bit.ex"
+        Description = "Git-2.42.0.2-64-bit.exe"
     },
     @{
-        Url = https://www.aescrypt.com/download/v3/windows/AESCrypt_v310_x64.zip"
+        Url = "https://www.aescrypt.com/download/v3/windows/AESCrypt_v310_x64.zip"
         Description = "AESCrypt_v310_x64.zip"
     },
     @{
