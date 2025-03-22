@@ -57,7 +57,7 @@ if ($usbDriveId -notmatch "^\\\\\\\\.\\\\PhysicalDrive\d+$") {
     exit
 }
 
-Write-Host "Formatujemy dysk przed instalacją Ventoy... Wszystkie dane na tym dysku zostaną usunięte!"
+Write-Host "Formating disk before installing Ventoy... All data will be lost!"
 
 $confirm = Read-Host "Format $usbDriveId and install Ventoy? (Y/N)"
 if ($confirm -ne 'Y') {
