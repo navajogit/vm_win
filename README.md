@@ -1,6 +1,6 @@
 ### **Last update: 28.04.2025**
 
-# How to add 3 basic shortcuts to windows similat to gnome:
+# How to add 3 basic shortcuts to windows similar to gnome:
 
 Run this script command in powershell with administrator privlages:
 
