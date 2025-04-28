@@ -125,12 +125,12 @@ while ($true) {
 
 $OtherfilesToDownload = @(
     @{
-        Url = "https://launchpad.net/veracrypt/trunk/1.26.7/+download/VeraCrypt%20Setup%201.26.7.exe"
-        Description = "VeraCryptSetup 1.26.7.exe"
+        Url = "https://launchpad.net/veracrypt/trunk/1.26.20/+download/VeraCrypt%20Setup%201.26.20.exe"
+        Description = "VeraCryptSetup 1.26.20.exe"
     },
     @{
-        Url = "https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/Git-2.42.0.2-64-bit.exe"
-        Description = "Git-2.42.0.2-64-bit.exe"
+        Url = "https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/Git-2.49.0-64-bit.exe"
+        Description = "Git-2.49.0-64-bit.exe"
     },
     @{
         # Url = "https://www.aescrypt.com/download/v3/windows/AESCrypt_v310_x64.zip"
