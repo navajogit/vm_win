@@ -8,11 +8,11 @@ Run this script command in powershell with administrator privlages:
    irm https://raw.githubusercontent.com/navajogit/vm_win/refs/heads/main/startup.ps1 | iex
    ```
 This script will:
-1. Change shortcuts to work similar as in gnome:
+## 1. Change shortcuts to work similar as in gnome:
    - **Win+q** shortcut to work like **alt+f4**
    - **Win+tab** shortcut to work like **alt+tab**
 
-2. Proposal to install all / specific packages:
+## 2. Proposal to install all / specific packages:
 
 - **Portmaster Firewall**:
   - Portmaster is a firewall that helps protect your system's privacy and security by blocking unwanted connections and apps. It enhances protection against online threats and allows monitoring of network activity.
@@ -36,7 +36,7 @@ This script will:
 - **Tor Browser**:
   - Tor Browser allows for anonymous browsing by encrypting and routing traffic through the Tor network. It provides secure internet surfing while preserving privacy and enabling access to blocked content.
 
-3. Propose of wallpaper change to random from wallpapers_urls.txt. Workaround for Windows Restriction on Wallpaper Change (Visible Post-Restart)
+## 3. Propose of wallpaper change to random from wallpapers_urls.txt. Workaround for Windows Restriction on Wallpaper Change (Visible Post-Restart)
 
 # How to change wallpaper in unregistred Windows in QEMU VM enviroment or native instalation:
 
@@ -45,7 +45,7 @@ Run this script command in powershell with administrator privlages:
    ```powershell
    irm https://raw.githubusercontent.com/navajogit/vm_win/refs/heads/main/wallpapers.ps1 | iex
    ```
-# What is Ventoy?
+# What is Ventoy? (SCRIPT AT WORK - DO NOT RUN AT PRESENT)
 
 Ventoy is an open-source tool designed to create bootable USB drives. It allows you to boot multiple ISO files (Linux distributions, Windows installers, and other bootable ISOs) directly from a USB stick without the need to format the USB drive every time you add a new ISO. Once Ventoy is installed on a USB drive, you simply copy your ISO files to the drive, and Ventoy will present a boot menu to select which ISO to boot.
 
