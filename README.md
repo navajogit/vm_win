@@ -1,4 +1,7 @@
 # How to Install Windows packages for QEMU VM enviroment:
+
+Run this script command in powershell with administrator privlages:
+
    ```powershell
    irm https://raw.githubusercontent.com/navajogit/vm_win/refs/heads/main/startup.ps1 | iex
    ```
@@ -15,7 +18,14 @@ This script will:
    - Clamav antyvirus
    - Torbrowser
 3. Propose of wallpaper change (not registred windows blocks changing of wallpaper)
-   
+
+# How to change wallpaper in not registred windows in QEMU VM enviroment or native instalation:
+
+Run this script command in powershell with administrator privlages:
+
+   ```powershell
+   irm https://raw.githubusercontent.com/navajogit/vm_win/refs/heads/main/wallpapers.ps1 | iex
+   ```
 # What is Ventoy?
 
 Ventoy is an open-source tool designed to create bootable USB drives. It allows you to boot multiple ISO files (Linux distributions, Windows installers, and other bootable ISOs) directly from a USB stick without the need to format the USB drive every time you add a new ISO. Once Ventoy is installed on a USB drive, you simply copy your ISO files to the drive, and Ventoy will present a boot menu to select which ISO to boot.
