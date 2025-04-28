@@ -58,10 +58,7 @@ This script will:
 - **Tor Browser**:
   - Tor Browser allows for anonymous browsing by encrypting and routing traffic through the Tor network. It provides secure internet surfing while preserving privacy and enabling access to blocked content.
 
-### 2. Propose of wallpaper change to random from wallpapers_urls.txt. 
-**Its a workaround for Windows Restriction on Wallpaper Change**
-
-### 3. Propose to install Chris Titus Tech's Windows Utility
+### 2. Propose to install Chris Titus Tech's Windows Utility
 
 - **Chris Titus Tech's Windows Utility** is a comprehensive PowerShell-based tool designed to streamline and optimize Windows systems. It offers a range of features to enhance system performance and manageability:
 
@@ -80,7 +77,7 @@ This script will:
 irm https://christitus.com/win | iex
 ```
 
-### 4. Available additional files to download:
+### 3. Available additional files to download:
 
 - **VeraCryptSetup 1.26.20.exe**  
   - A disk encryption software that provides on-the-fly encryption for your files, folders, or entire drives. It helps to protect sensitive data with strong encryption algorithms.  
