@@ -11,14 +11,31 @@ This script will:
 1. Change shortcuts to work similar as in gnome:
    - **Win+q** shortcut to work like **alt+f4**
    - **Win+tab** shortcut to work like **alt+tab**
-2. Propose instalation of all / specific packages:
-   - Portmaster firewall
-   - Windscribe VPN
-   - BraveBrowser
-   - Spice-guest-tools (for good screen scaling resolution)
-   - Spice-webdavd
-   - Clamav antyvirus
-   - Torbrowser
+
+2. Proposal to install all / specific packages:
+
+- **Portmaster Firewall**:
+  - Portmaster is a firewall that helps protect your system's privacy and security by blocking unwanted connections and apps. It enhances protection against online threats and allows monitoring of network activity.
+  - **Note**: Portmaster may require some knowledge of data flow configuration in your local network to ensure that peripherals such as printers and other devices function correctly.
+
+- **Windscribe VPN**:
+  - Windscribe is a VPN that encrypts your internet connection, hides your IP address, and allows access to geographically restricted content. It also blocks ads and trackers, increasing your online privacy.
+
+- **Brave Browser**:
+  - Brave is a browser that automatically blocks ads and trackers, providing better privacy and security online. It also allows supporting content creators through a payment system based on BAT tokens.
+
+- **Spice-guest-tools**:
+  - Spice-guest-tools are utilities for virtual machines that improve graphics quality and allow better screen resolution scaling, making the use of virtual machines more comfortable.
+
+- **Spice-webdavd**:
+  - Spice-webdavd is a WebDAV server that enables remote access to files between virtual machines and other devices on the network. It's useful for data exchange between systems.
+
+- **ClamAV Antivirus**:
+  - ClamAV is a free antivirus program that protects against viruses and other online threats. It regularly updates its databases to detect new threats.
+
+- **Tor Browser**:
+  - Tor Browser allows for anonymous browsing by encrypting and routing traffic through the Tor network. It provides secure internet surfing while preserving privacy and enabling access to blocked content.
+
 3. Propose of wallpaper change to random from wallpapers_urls.txt. Workaround for Windows Restriction on Wallpaper Change (Visible Post-Restart)
 
 # How to change wallpaper in unregistred Windows in QEMU VM enviroment or native instalation:
