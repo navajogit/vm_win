@@ -1,35 +1,44 @@
-# changing wallpaper with external list of URLs
-
-# URL with wallpaper list
+# URL z listą tapet
 $githubRepoUrl = "https://raw.githubusercontent.com/navajogit/vm_win/main/wallpapers_urls.txt"
 
-# Get wallpapers list and setup
+# Pobierz listę
 $wallpaperUrls = (Invoke-RestMethod -Uri $githubRepoUrl -UseBasicParsing).Split([Environment]::NewLine, [StringSplitOptions]::RemoveEmptyEntries)
 
+function Set-Wallpaper($path) {
+    $code = @"
+using System.Runtime.InteropServices;
+namespace Wallpaper {
+    public enum Style : int {
+        Tiled,
+        Centered,
+        Stretched
+    }
+    public class Setter {
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern bool SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
+    }
+}
+"@
+    Add-Type $code
+    $regKey = "HKCU:\Control Panel\Desktop"
+    Set-ItemProperty -Path $regKey -Name Wallpaper -Value $path
+    Set-ItemProperty -Path $regKey -Name WallpaperStyle -Value 2  # 2 = Stretched
+    Set-ItemProperty -Path $regKey -Name TileWallpaper -Value 0
+
+    [Wallpaper.Setter]::SystemParametersInfo(20, 0, $path, 0x01 -bor 0x02)
+}
+
 while ($true) {
-    $changeWallpaper = Read-Host "Do you want to change the desktop wallpaper? (Y/N)"
-    if ($changeWallpaper -eq "Y" -or $changeWallpaper -eq "y") {
-        # Set random 
+    $input = Read-Host "`nHIT ENTER TO CHANGE WALLPAPER or any other key then ENTER to exit"
+    if ($input -eq "") {
         $randomUrl = $wallpaperUrls | Get-Random
-        # path
-        $wallpaperPath = "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Themes\TranscodedWallpaper"
+        $wallpaperPath = "$env:TEMP\wallpaper_$(Get-Random).jpg"
+        Invoke-WebRequest -Uri $randomUrl -OutFile $wallpaperPath -UseBasicParsing
 
-        # Downloading with wget
-        Invoke-WebRequest -Uri $randomUrl -OutFile $wallpaperPath
-
-        # Set picture as wallpaper
-        rundll32.exe user32.dll, UpdatePerUserSystemParameters
-
-        # Additinal refress through registry
-        $regKey = "HKCU:\Control Panel\Desktop"
-        Set-ItemProperty -Path $regKey -Name Wallpaper -Value $wallpaperPath
-        Set-ItemProperty -Path $regKey -Name WallpaperStyle -Value 2 # 2 - Tiling, 0 - Centered, 6 - Stretched (optionally modify)
-        # referesh
-        rundll32.exe user32.dll, UpdatePerUserSystemParameters
-
-        Write-Host "The wallpaper has been changed to a random image from the GitHub repository."
+        Set-Wallpaper -path $wallpaperPath
+        Write-Host "`n✔ Wallpaper changed to: $randomUrl"
     } else {
-        Write-Host "Exiting the wallpaper changer."
+        Write-Host "`nExiting wallpaper changer."
         break
     }
 }
