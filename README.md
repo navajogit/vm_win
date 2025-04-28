@@ -1,3 +1,5 @@
+### **Last update: 28.05.2025**
+
 # How to Install Windows packages for QEMU VM enviroment:
 
 Run this script command in powershell with administrator privlages:
@@ -9,7 +11,7 @@ This script will:
 1. Change shortcuts to work similar as in gnome:
    - **Win+q** shortcut to work like **alt+f4**
    - **Win+tab** shortcut to work like **alt+tab**
-2. Propose instalation of:
+2. Propose instalation of all / specific packages:
    - Portmaster firewall
    - Windscribe VPN
    - BraveBrowser
@@ -17,7 +19,7 @@ This script will:
    - Spice-webdavd
    - Clamav antyvirus
    - Torbrowser
-3. Propose of wallpaper change (not registred windows blocks changing of wallpaper)
+3. Propose of wallpaper change to random from wallpapers_urls.txt. Workaround for Windows Restriction on Wallpaper Change (Visible Post-Restart)
 
 # How to change wallpaper in unregistred Windows in QEMU VM enviroment or native instalation:
 
