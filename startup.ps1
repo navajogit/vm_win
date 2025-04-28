@@ -133,11 +133,14 @@ $OtherfilesToDownload = @(
         Description = "Git-2.42.0.2-64-bit.exe"
     },
     @{
-        Url = "https://www.aescrypt.com/download/v3/windows/AESCrypt_v310_x64.zip"
+        # Url = "https://www.aescrypt.com/download/v3/windows/AESCrypt_v310_x64.zip"
+        Url = "https://web.archive.org/web/20240428012709/https://www.aescrypt.com/download/v3/windows/AESCrypt_v310_x64.zip"
         Description = "AESCrypt_v310_x64.zip"
+        
     },
     @{
-        Url = "https://www.aescrypt.com/download/v3/windows/AESCrypt_console_v310_x64.zip"
+        # Url = "https://www.aescrypt.com/download/v3/windows/AESCrypt_console_v310_x64.zip"
+        Url = "https://web.archive.org/web/20240428012611/https://www.aescrypt.com/download/v3/windows/AESCrypt_console_v310_x64.zip"
         Description = "AESCrypt_console_v310_x64.zip"
     }
 )
