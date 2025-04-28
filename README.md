@@ -22,9 +22,6 @@ Run this script command in powershell with administrator privlages:
    irm https://raw.githubusercontent.com/navajogit/vm_win/refs/heads/main/startup.ps1 | iex
    ```
 This script will:
-## 1. Change shortcuts to work similar as in gnome:
-   - **Win+q** shortcut to work like **alt+f4**
-   - **Win+tab** shortcut to work like **alt+tab**
 
 ## 1. Proposal to install all / specific packages:
 
