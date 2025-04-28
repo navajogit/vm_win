@@ -1,25 +1,30 @@
-# changing wallpaper with exteranal list of urls
+# changing wallpaper with external list of URLs
 
-# URL repozytorium GitHub zawierającego listę URL obrazków
+# URL with wallpaper list
 $githubRepoUrl = "https://raw.githubusercontent.com/navajogit/vm_win/main/wallpapers_urls.txt"
 
-# Pobierz zawartość pliku z listą URL obrazków i podziel na tablicę
+# Get wallpapers list and setup
 $wallpaperUrls = (Invoke-RestMethod -Uri $githubRepoUrl -UseBasicParsing).Split([Environment]::NewLine, [StringSplitOptions]::RemoveEmptyEntries)
 
 while ($true) {
-    # Zapytaj użytkownika, czy chce zmienić tapetę
     $changeWallpaper = Read-Host "Do you want to change the desktop wallpaper? (Y/N)"
     if ($changeWallpaper -eq "Y" -or $changeWallpaper -eq "y") {
-        # Wybierz losowy URL z listy
+        # Set random 
         $randomUrl = $wallpaperUrls | Get-Random
-
-        # Ścieżka docelowa dla tapety w folderze tapet systemowych
+        # path
         $wallpaperPath = "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Themes\TranscodedWallpaper"
 
-        # Pobierz losowy obrazek za pomocą wget
+        # Downloading with wget
         Invoke-WebRequest -Uri $randomUrl -OutFile $wallpaperPath
 
-        # Ustaw obrazek jako tapetę
+        # Set picture as wallpaper
+        rundll32.exe user32.dll, UpdatePerUserSystemParameters
+
+        # Additinal refress through registry
+        $regKey = "HKCU:\Control Panel\Desktop"
+        Set-ItemProperty -Path $regKey -Name Wallpaper -Value $wallpaperPath
+        Set-ItemProperty -Path $regKey -Name WallpaperStyle -Value 2 # 2 - Tiling, 0 - Centered, 6 - Stretched (optionally modify)
+        # referesh
         rundll32.exe user32.dll, UpdatePerUserSystemParameters
 
         Write-Host "The wallpaper has been changed to a random image from the GitHub repository."
