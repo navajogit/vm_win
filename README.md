@@ -23,7 +23,7 @@ Run this script command in powershell with administrator privlages:
    ```
 This script will:
 
-## 1. Proposal to install all / specific packages:
+## 1. Propose to install all / specific packages:
 
 - **Portmaster Firewall**:
   - Portmaster is a firewall that helps protect your system's privacy and security by blocking unwanted connections and apps. It enhances protection against online threats and allows monitoring of network activity.
@@ -50,7 +50,7 @@ This script will:
 ## 2. Propose of wallpaper change to random from wallpapers_urls.txt. 
 **Its a workaround for Windows Restriction on Wallpaper Change (Visible Post-Restart)**
 
-## 3. Proposal to install Chris Titus Tech's Windows Utility
+## 3. Propose to install Chris Titus Tech's Windows Utility
 
 - **Chris Titus Tech's Windows Utility** is a comprehensive PowerShell-based tool designed to streamline and optimize Windows systems. It offers a range of features to enhance system performance and manageability:
 
