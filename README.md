@@ -38,6 +38,26 @@ This script will:
 
 ## 3. Propose of wallpaper change to random from wallpapers_urls.txt. Workaround for Windows Restriction on Wallpaper Change (Visible Post-Restart)
 
+
+### 4. Proposal to install Chris Titus Tech's Windows Utility
+
+- **Chris Titus Tech's Windows Utility** is a comprehensive PowerShell-based tool designed to streamline and optimize Windows systems. It offers a range of features to enhance system performance and manageability:
+
+  - **Program Installation**: Install multiple programs with a single click, simplifying the setup process.
+  
+  - **Tweaks**: Apply various system optimizations, including disabling telemetry, removing unwanted background services, and configuring system settings for improved performance.
+  
+  - **Config**: Access legacy Windows control panels and configure system settings to suit your preferences.
+  
+  - **Updates**: Adjust Windows Update settings to install only security updates or disable updates altogether, providing greater control over system updates.
+  
+  - **Microwin**: Create a minimal Windows ISO with the utility pre-installed, ideal for fresh installations.
+
+**Note**: To run the utility natively, open PowerShell as Administrator and execute the following command:
+```powershell
+irm https://christitus.com/win | iex
+```
+
 # How to change wallpaper in unregistred Windows in QEMU VM enviroment or native instalation:
 
 Run this script command in powershell with administrator privlages:
