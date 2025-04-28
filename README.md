@@ -70,7 +70,7 @@ irm https://christitus.com/win | iex
 ```
 
 # How to change wallpaper in unregistred Windows in QEMU VM enviroment or native instalation:
-**Workaround for Windows Restriction on Wallpaper Change (Visible Post-Restart)**
+**Workaround for Windows Restriction on Wallpaper Change**
 
 Run this script command in powershell with administrator privlages:
 
