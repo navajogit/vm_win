@@ -69,6 +69,25 @@ This script will:
 irm https://christitus.com/win | iex
 ```
 
+## 4. Available additional files to download:
+
+- **VeraCryptSetup 1.26.20.exe**  
+  - A disk encryption software that provides on-the-fly encryption for your files, folders, or entire drives. It helps to protect sensitive data with strong encryption algorithms.  
+  **Latest Version**: 1.26.20, includes the latest security improvements and bug fixes.
+  
+- **Git-2.49.0-64-bit.exe**  
+  - A version control system that allows multiple developers to collaborate on code by tracking changes and managing project histories. Git is widely used in software development.  
+  **Latest Version**: 2.49.0, includes new features, optimizations, and bug fixes.
+
+- **AESCrypt_v310_x64.zip**  (web archive) 
+  - A file encryption tool based on the Advanced Encryption Standard (AES). It enables secure encryption of files and folders using strong encryption techniques.  
+  **Note**: This is an older version that does not require a subscription, but it may lack some features found in the latest versions and might not be fully compatible with the newest updates or functionalities.
+
+- **AESCrypt_console_v310_x64.zip**  (web archive) 
+  - The console (command-line) version of AESCrypt, providing the same AES file encryption capabilities, but accessible via terminal or command prompt for automation and batch operations.  
+  **Note**: This is an older version that does not require a subscription, but it may lack some features found in the latest versions and might not be fully compatible with the newest updates or functionalities.
+
+
 # How to change wallpaper in unregistred Windows in QEMU VM enviroment or native instalation:
 **Workaround for Windows Restriction on Wallpaper Change**
 
