@@ -15,7 +15,17 @@ This script will:
 
 ---
 
-# How to Install Windows packages for QEMU VM enviroment:
+# Change wallpaper in unregistred Windows in QEMU VM enviroment or native instalation:
+**Workaround for Windows Restriction on Wallpaper Change**
+
+Run this script command in powershell with administrator privlages:
+
+   ```powershell
+   irm https://raw.githubusercontent.com/navajogit/vm_win/refs/heads/main/wallpapers.ps1 | iex
+   ```
+---
+
+# How to Install essential Windows packages for QEMU VM (+gnomeboxes) enviroment:
 
 Run this script command in powershell with administrator privlages:
 
@@ -88,16 +98,6 @@ irm https://christitus.com/win | iex
   - The console (command-line) version of AESCrypt, providing the same AES file encryption capabilities, but accessible via terminal or command prompt for automation and batch operations.  
   **Note**: This is an older version that does not require a subscription, but it may lack some features found in the latest versions and might not be fully compatible with the newest updates or functionalities.
 
----
-
-# How to change wallpaper in unregistred Windows in QEMU VM enviroment or native instalation:
-**Workaround for Windows Restriction on Wallpaper Change**
-
-Run this script command in powershell with administrator privlages:
-
-   ```powershell
-   irm https://raw.githubusercontent.com/navajogit/vm_win/refs/heads/main/wallpapers.ps1 | iex
-   ```
 ---
 
 # What is Ventoy? (SCRIPT AT WORK - DO NOT RUN AT PRESENT)
