@@ -1,5 +1,19 @@
 ### **Last update: 28.04.2025**
 
+# How to add 3 basic shortcuts to windows similat to gnome:
+
+Run this script command in powershell with administrator privlages:
+
+   ```powershell
+   irm https://raw.githubusercontent.com/navajogit/vm_win/refs/heads/main/shortcuts.ps1 | iex
+   ```
+This script will:
+## Change basic shortcuts to work similar as in gnome:
+   - **Win+q** shortcut to work like **alt+f4** instead of opening the Search feature
+   - **Win+tab** shortcut to work like **alt+tab** 
+   - **Win+f** shortcut will run the file explorer
+
+
 # How to Install Windows packages for QEMU VM enviroment:
 
 Run this script command in powershell with administrator privlages:
@@ -12,7 +26,7 @@ This script will:
    - **Win+q** shortcut to work like **alt+f4**
    - **Win+tab** shortcut to work like **alt+tab**
 
-## 2. Proposal to install all / specific packages:
+## 1. Proposal to install all / specific packages:
 
 - **Portmaster Firewall**:
   - Portmaster is a firewall that helps protect your system's privacy and security by blocking unwanted connections and apps. It enhances protection against online threats and allows monitoring of network activity.
@@ -36,10 +50,10 @@ This script will:
 - **Tor Browser**:
   - Tor Browser allows for anonymous browsing by encrypting and routing traffic through the Tor network. It provides secure internet surfing while preserving privacy and enabling access to blocked content.
 
-## 3. Propose of wallpaper change to random from wallpapers_urls.txt. 
+## 2. Propose of wallpaper change to random from wallpapers_urls.txt. 
 **Its a workaround for Windows Restriction on Wallpaper Change (Visible Post-Restart)**
 
-### 4. Proposal to install Chris Titus Tech's Windows Utility
+### 3. Proposal to install Chris Titus Tech's Windows Utility
 
 - **Chris Titus Tech's Windows Utility** is a comprehensive PowerShell-based tool designed to streamline and optimize Windows systems. It offers a range of features to enhance system performance and manageability:
 
