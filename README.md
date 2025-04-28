@@ -48,7 +48,7 @@ This script will:
   - Tor Browser allows for anonymous browsing by encrypting and routing traffic through the Tor network. It provides secure internet surfing while preserving privacy and enabling access to blocked content.
 
 ## 2. Propose of wallpaper change to random from wallpapers_urls.txt. 
-**Its a workaround for Windows Restriction on Wallpaper Change (Visible Post-Restart)**
+**Its a workaround for Windows Restriction on Wallpaper Change**
 
 ## 3. Propose to install Chris Titus Tech's Windows Utility
 
