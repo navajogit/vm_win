@@ -1,6 +1,6 @@
 ### **Last update: 28.04.2025**
 
-# How to add 3 basic shortcuts to windows similar to gnome:
+## How to add 3 basic shortcuts to windows similar to gnome:
 
 Run this script command in powershell with administrator privlages:
 
@@ -8,14 +8,14 @@ Run this script command in powershell with administrator privlages:
    irm https://raw.githubusercontent.com/navajogit/vm_win/refs/heads/main/shortcuts.ps1 | iex
    ```
 This script will:
-## Change basic shortcuts to work similar as in gnome:
+### Change basic shortcuts to work similar as in gnome:
    - **Win+q** shortcut to work like **alt+f4** instead of opening the Search feature
    - **Win+tab** shortcut to work like **alt+tab** 
    - **Win+f** shortcut will run the file explorer
 
 ---
 
-# Change wallpaper in unregistred Windows in QEMU VM enviroment or native instalation:
+## Change wallpaper in unregistred Windows in QEMU VM enviroment or native instalation:
 **Workaround for Windows Restriction on Wallpaper Change**
 
 Run this script command in powershell with administrator privlages:
@@ -25,7 +25,7 @@ Run this script command in powershell with administrator privlages:
    ```
 ---
 
-# How to Install essential Windows packages for QEMU VM (+gnomeboxes) enviroment:
+## How to Install essential Windows packages for QEMU VM (+gnomeboxes) enviroment:
 
 Run this script command in powershell with administrator privlages:
 
@@ -34,7 +34,7 @@ Run this script command in powershell with administrator privlages:
    ```
 This script will:
 
-## 1. Propose to install all / specific packages:
+### 1. Propose to install all / specific packages:
 
 - **Portmaster Firewall**:
   - Portmaster is a firewall that helps protect your system's privacy and security by blocking unwanted connections and apps. It enhances protection against online threats and allows monitoring of network activity.
@@ -58,10 +58,10 @@ This script will:
 - **Tor Browser**:
   - Tor Browser allows for anonymous browsing by encrypting and routing traffic through the Tor network. It provides secure internet surfing while preserving privacy and enabling access to blocked content.
 
-## 2. Propose of wallpaper change to random from wallpapers_urls.txt. 
+### 2. Propose of wallpaper change to random from wallpapers_urls.txt. 
 **Its a workaround for Windows Restriction on Wallpaper Change**
 
-## 3. Propose to install Chris Titus Tech's Windows Utility
+### 3. Propose to install Chris Titus Tech's Windows Utility
 
 - **Chris Titus Tech's Windows Utility** is a comprehensive PowerShell-based tool designed to streamline and optimize Windows systems. It offers a range of features to enhance system performance and manageability:
 
@@ -80,7 +80,7 @@ This script will:
 irm https://christitus.com/win | iex
 ```
 
-## 4. Available additional files to download:
+### 4. Available additional files to download:
 
 - **VeraCryptSetup 1.26.20.exe**  
   - A disk encryption software that provides on-the-fly encryption for your files, folders, or entire drives. It helps to protect sensitive data with strong encryption algorithms.  
@@ -100,11 +100,11 @@ irm https://christitus.com/win | iex
 
 ---
 
-# What is Ventoy? (SCRIPT AT WORK - DO NOT RUN AT PRESENT)
+## What is Ventoy? (SCRIPT AT WORK - DO NOT RUN AT PRESENT)
 
 Ventoy is an open-source tool designed to create bootable USB drives. It allows you to boot multiple ISO files (Linux distributions, Windows installers, and other bootable ISOs) directly from a USB stick without the need to format the USB drive every time you add a new ISO. Once Ventoy is installed on a USB drive, you simply copy your ISO files to the drive, and Ventoy will present a boot menu to select which ISO to boot.
 
-# How to Install Ventoy on a USB Drive using PowerShell
+### How to Install Ventoy on a USB Drive using PowerShell
 
 This guide will walk you through the process of installing Ventoy on your USB drive using a PowerShell script. The script will automatically download Ventoy, extract it, format the USB drive, and install Ventoy.
 
@@ -113,7 +113,7 @@ This guide will walk you through the process of installing Ventoy on your USB dr
 2. A USB drive that you want to install Ventoy on.
 3. A working internet connection to download the Ventoy package.
 
-### Steps:
+#### Steps:
 
 1. **Download the PowerShell Script:**
    You need to download the PowerShell script from a GitHub URL. You can use this simple command to download the script and execute it directly in your PowerShell:
@@ -135,16 +135,16 @@ After downloading the script, it will guide you through the process of installin
 - Formats the USB drive (all data will be lost).
 - Installs Ventoy on the USB drive.
 
-### Format the USB Drive:
+#### Format the USB Drive:
 During the installation process, the script will ask you to confirm the formatting of the selected USB drive. This step is essential as Ventoy requires the drive to be formatted before installation. Ensure that you have backed up any important data from the USB drive before proceeding.
 
-### Confirm Installation:
+#### Confirm Installation:
 Once you confirm the format and installation, the script will proceed with the installation. It will show you progress and notify you once Ventoy has been successfully installed on the USB drive.
 
-### Using Ventoy:
+#### Using Ventoy:
 After the installation, your USB drive will have two partitions. The first partition is where you will copy your ISO files. Simply drag and drop your ISO files to the drive. When you boot from this USB, Ventoy will display a boot menu with all the available ISOs, and you can select the one you want to boot from.
 
-### Important Notes:
+#### Important Notes:
 - The installation process will **erase all data** on the selected USB drive. Make sure to back up any important files before proceeding.
 - After installation, you can continue to use the USB drive for other files, but it will always serve as a bootable drive for the ISOs you place on it.
 - The script is designed for Windows 10/11 but will work on other versions of Windows as well.
