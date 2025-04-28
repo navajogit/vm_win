@@ -39,12 +39,6 @@ This script will:
 ## 3. Propose of wallpaper change to random from wallpapers_urls.txt. 
 **Its a workaround for Windows Restriction on Wallpaper Change (Visible Post-Restart)**
 
-Run this script command in powershell with administrator privlages:
-
-   ```powershell
-   irm https://raw.githubusercontent.com/navajogit/vm_win/refs/heads/main/startup.ps1 | iex
-   ```
-
 ### 4. Proposal to install Chris Titus Tech's Windows Utility
 
 - **Chris Titus Tech's Windows Utility** is a comprehensive PowerShell-based tool designed to streamline and optimize Windows systems. It offers a range of features to enhance system performance and manageability:
@@ -65,6 +59,7 @@ irm https://christitus.com/win | iex
 ```
 
 # How to change wallpaper in unregistred Windows in QEMU VM enviroment or native instalation:
+**Workaround for Windows Restriction on Wallpaper Change (Visible Post-Restart)**
 
 Run this script command in powershell with administrator privlages:
 
