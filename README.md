@@ -19,7 +19,7 @@ This script will:
    - Torbrowser
 3. Propose of wallpaper change (not registred windows blocks changing of wallpaper)
 
-# How to change wallpaper in not registred windows in QEMU VM enviroment or native instalation:
+# How to change wallpaper in unregistred Windows in QEMU VM enviroment or native instalation:
 
 Run this script command in powershell with administrator privlages:
 
