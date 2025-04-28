@@ -52,12 +52,12 @@ if (-Not (Test-Path $shortcutPath)) {
 
 $filesToDownload = @(
     @{
-        Url = "https://updates.safing.io/latest/windows_amd64/packages/portmaster-installer.exe"
+        Url = "https://updates.safing.io/latest/windows_amd64/packages/Firewall - portmaster-installer.exe"
         Description = "portmaster-installer.exe"
     },
     @{
-        Url = "https://windscribe.com/install/desktop/windows/Windscribe_2.6.14.exe"
-        Description = "Windscribe_2.6.14.exe"
+        Url = "https://windscribe.com/install/desktop/windows/Windscribe_2.14.12.exe"
+        Description = "Windscribe_2.14.12.exe"
     },
     @{
         Url = "https://laptop-updates.brave.com/latest/winx64/BraveBrowserSetup.exe"
@@ -72,12 +72,12 @@ $filesToDownload = @(
         Description = "spice-webdavd-x64-latest.msi"
     },
     @{
-        Url = "https://www.clamav.net/downloads/production/clamav-1.2.0.win.x64.msi"
-        Description = "clamav-1.2.0.win.x64.msi"
+        Url = "https://www.clamav.net/downloads/production/clamav-1.4.2.win.x64.msi"
+        Description = "clamav-1.4.2.win.x64.msi"
     },
     @{
-        Url = "https://www.torproject.org/dist/torbrowser/12.5.6/torbrowser-install-win64-12.5.6_ALL.exe"
-        Description = "torbrowser-install-win64-12.5.6_ALL.exe"
+        Url = "https://dist.torproject.org/torbrowser/13.5a11/tor-browser-windows-x86_64-portable-13.5a11.exe"
+        Description = "tor-browser-windows-x86_64-portable-13.5a11.exe"
     }
 )
 
