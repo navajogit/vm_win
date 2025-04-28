@@ -2,8 +2,10 @@
    ```powershell
    irm https://raw.githubusercontent.com/navajogit/vm_win/refs/heads/main/startup.ps1 | iex
    ```
-this will:
-1. Change **Win+q** shortcut to work as **alt+tab**
+This script will:
+1. Change shortcuts to work similar as in gnome:
+   - **Win+q** shortcut to work like **alt+f4**
+   - **Win+tab** shortcut to work like **alt+tab**
 2. Propose instalation of:
    - Portmaster firewall
    - Windscribe VPN
