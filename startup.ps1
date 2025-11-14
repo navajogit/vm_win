@@ -1,4 +1,7 @@
-# Lista plików do pobrania
+
+
+z tym jako automatyczne zainstalowanie aliasu   pod jakimś nowym punktem
+
 $filesToDownload = @(
     @{
         Url = "https://updates.safing.io/latest/windows_amd64/packages/Firewall - portmaster-installer.exe"
@@ -30,13 +33,13 @@ $filesToDownload = @(
     }
 )
 
-# Wyświetlenie dostępnych plików do pobrania
+# Display descriptions of all files
 Write-Host "Available basic startup files to download:"
 $filesToDownload | ForEach-Object {
     Write-Host "$($_.Description)"
 }
 
-# Zapytaj użytkownika, czy chce pobrać wszystkie pliki
+# Ask the user if they want to download all files at once.
 Write-Host "Do you want to download all available basic startup files at once? (Y/N)"
 $downloadAll = Read-Host
 if ($downloadAll -eq "Y" -or $downloadAll -eq "y") {
@@ -52,7 +55,7 @@ if ($downloadAll -eq "Y" -or $downloadAll -eq "y") {
         }
     }
 } else {
-    # Pętla pobierania pojedynczych plików
+    # Loop through the list of files and ask the user whether to download each one
     foreach ($fileInfo in $filesToDownload) {
         Write-Host "Do you want to download $($fileInfo.Description)? (Y/N)"
         $downloadChoice = Read-Host
@@ -72,24 +75,22 @@ if ($downloadAll -eq "Y" -or $downloadAll -eq "y") {
     }
 }
 
-# Tweaks (opcjonalne ustawienia lub dodatkowe operacje)
-Write-Host "Performing system tweaks..."
 
-# Przykład dodania jakiejś prostej operacji (np. usuwanie plików tymczasowych)
-Write-Host "Cleaning up temporary files..."
-Remove-Item -Path "$env:TEMP\*" -Recurse -Force
 
-# Zapytaj użytkownika, czy chce uruchomić program z zewnętrznego źródła
+# tweaks
+
+# Prompt to run the program
 $runProgram = Read-Host "Do you want to run the program from christitus.com? (Y/N)"
 if ($runProgram -eq "Y" -or $runProgram -eq "y") {
-    # Pobierz i uruchom skrypt z zewnętrznego źródła
-    Write-Host "Running external program..."
+    # Run the script from christitus.com
     Invoke-Expression (Invoke-WebRequest -Uri "https://christitus.com/win").Content
 } else {
     Write-Host "The program was not executed."
 }
 
-# Dodatkowe pliki do pobrania
+
+
+
 $OtherfilesToDownload = @(
     @{
         Url = "https://launchpad.net/veracrypt/trunk/1.26.20/+download/VeraCrypt%20Setup%201.26.20.exe"
@@ -100,22 +101,25 @@ $OtherfilesToDownload = @(
         Description = "Git-2.49.0-64-bit.exe"
     },
     @{
+        # Url = "https://www.aescrypt.com/download/v3/windows/AESCrypt_v310_x64.zip"
         Url = "https://web.archive.org/web/20240428012709/https://www.aescrypt.com/download/v3/windows/AESCrypt_v310_x64.zip"
         Description = "AESCrypt_v310_x64.zip"
+        
     },
     @{
+        # Url = "https://www.aescrypt.com/download/v3/windows/AESCrypt_console_v310_x64.zip"
         Url = "https://web.archive.org/web/20240428012611/https://www.aescrypt.com/download/v3/windows/AESCrypt_console_v310_x64.zip"
         Description = "AESCrypt_console_v310_x64.zip"
     }
 )
 
-# Wyświetlenie dodatkowych plików do pobrania
+# Display descriptions of all files
 Write-Host "Available additional files to download:"
 $OtherfilesToDownload | ForEach-Object {
     Write-Host "$($_.Description)"
 }
 
-# Zapytaj użytkownika, czy chce pobrać wszystkie dodatkowe pliki
+# Ask the user if they want to download all files at once.
 Write-Host "Do you want to download all available additional files at once? (Y/N)"
 $downloadAll = Read-Host
 if ($downloadAll -eq "Y" -or $downloadAll -eq "y") {
@@ -131,7 +135,7 @@ if ($downloadAll -eq "Y" -or $downloadAll -eq "y") {
         }
     }
 } else {
-    # Pętla pobierania pojedynczych dodatkowych plików
+    # Loop through the list of files and ask the user whether to download each one
     foreach ($fileInfo in $OtherfilesToDownload) {
         Write-Host "Do you want to download $($fileInfo.Description)? (Y/N)"
         $downloadChoice = Read-Host
@@ -150,3 +154,6 @@ if ($downloadAll -eq "Y" -or $downloadAll -eq "y") {
         }
     }
 }
+
+
+PISZ CAŁOSCI NIC POZA TYM NIE ZMIANIAJ
